@@ -3,12 +3,10 @@
 # Contributor: Spikerguy <tech@fkardame.com>
 # Pre-Built IMG by MrFixit
 
-buildarch=8
-
 pkgname=uboot-pinebookpro
 pkgver=1.1
 pkgrel=1
-pkgdesc="U-Boot for Pinebook Pro"
+pkgdesc="U-Boot for Pinebook Pro (prebuilt binaries)"
 arch=('aarch64')
 url='https://github.com/mrfixit2001/updates_repo/tree/v1.1/pinebook/filesystem'
 license=('GPL')
@@ -21,8 +19,7 @@ source=('uboot.img'
         )
 md5sums=('e073aa1f531e666fc4e8678e8ffaa016'
          '2ad66a3fc90823e48fdd081059543709'
-         '763b41dbc3fee4aaf26b720e7722b235'
-         )
+         '763b41dbc3fee4aaf26b720e7722b235')
 
 package() {
   mkdir -p "${pkgdir}"/boot
