@@ -1,5 +1,6 @@
 # U-Boot: Pinebook Pro
-# Maintainer: Spikerguy <tech@fkardame.com>
+# Maintainer: Dan Johansen <strit@manjaro.org>
+# Contributor: Spikerguy <tech@fkardame.com>
 # Pre-Built IMG by MrFixit
 
 buildarch=8
