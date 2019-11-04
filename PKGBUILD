@@ -5,7 +5,7 @@
 
 pkgname=uboot-pinebookpro
 pkgver=1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="U-Boot for Pinebook Pro (prebuilt binaries)"
 arch=('aarch64')
 url='https://github.com/mrfixit2001/updates_repo/tree/v1.1/pinebook/filesystem'
