@@ -22,7 +22,7 @@ source=('uboot.img'
 md5sums=('e073aa1f531e666fc4e8678e8ffaa016'
          '2ad66a3fc90823e48fdd081059543709'
          '763b41dbc3fee4aaf26b720e7722b235'
-         '28e2b014c32e48782dc0c93641bf5d64'
+         '38dba847a2ca94e18509f9aaa708289d'
          '021623a04afd29ac3f368977140cfbfd')
 
 package() {

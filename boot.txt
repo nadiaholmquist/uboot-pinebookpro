@@ -4,7 +4,7 @@
 setenv macaddr da 19 c8 7a 6d f4
 
 part uuid ${devtype} ${devnum}:${bootpart} uuid
-setenv bootargs console=ttyS2,1500000 root=PARTUUID=${uuid} rw rootwait bootsplash.bootfile=bootsplash-themes/manjaro/bootsplash append console=ttyS2,1500000n8 video=eDP-1:1920x1080@60
+setenv bootargs console=ttyS2,1500000n8 root=PARTUUID=${uuid} rw rootwait bootsplash.bootfile=bootsplash-themes/manjaro/bootsplash append video=eDP-1:1920x1080@60
 setenv fdtfile rockchip/rk3399-pinebook-pro.dtb
 
 if load ${devtype} ${devnum}:${bootpart} ${kernel_addr_r} /boot/Image; then
