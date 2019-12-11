@@ -4,22 +4,21 @@
 # Pre-Built IMG by MrFixit
 
 pkgname=uboot-pinebookpro
-pkgver=1.1
-pkgrel=4
+pkgver=1.5
+pkgrel=1
 pkgdesc="U-Boot for Pinebook Pro (prebuilt binaries)"
 arch=('aarch64')
-url='https://github.com/mrfixit2001/updates_repo/tree/v1.1/pinebook/filesystem'
+url='https://github.com/mrfixit2001/updates_repo/tree/v1.5/pinebook/filesystem'
 license=('GPL')
 makedepends=('uboot-tools')
-#Commented out until we know the parition to be used.
-#install=${pkgname}.install
+install=${pkgname}.install
 source=('uboot.img'
     'trust.img'
 	'idbloader.img'
 	'boot.txt'
 	'mkscr'
         )
-md5sums=('e073aa1f531e666fc4e8678e8ffaa016'
+md5sums=('80c927ad86428f65f4a3d1c3e846b6c8'
          '2ad66a3fc90823e48fdd081059543709'
          '763b41dbc3fee4aaf26b720e7722b235'
          '38dba847a2ca94e18509f9aaa708289d'
