@@ -5,7 +5,7 @@
 
 pkgname=uboot-pinebookpro
 pkgver=2017.09
-pkgrel=1
+pkgrel=2
 pkgdesc="U-Boot for Pinebook Pro - MrFixit2001's source tree"
 arch=('aarch64')
 url='http://www.denx.de/wiki/U-Boot/WebHome'
