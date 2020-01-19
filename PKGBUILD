@@ -5,7 +5,7 @@
 
 pkgname=uboot-pinebookpro
 pkgver=2020.01
-pkgrel=1
+pkgrel=2
 pkgdesc="U-Boot for Pinebook Pro"
 arch=('aarch64')
 url='https://git.eno.space/pbp-uboot.'
