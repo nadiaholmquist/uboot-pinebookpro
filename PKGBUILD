@@ -5,7 +5,7 @@
 
 pkgname=uboot-pinebookpro
 pkgver=2020.01
-pkgrel=6
+pkgrel=7
 pkgdesc="U-Boot for Pinebook Pro"
 arch=('aarch64')
 url='https://git.eno.space/pbp-uboot.'
@@ -20,7 +20,7 @@ source=("git+https://git.eno.space/pbp-uboot.git"
         #'0001-nvme-support.patch')
 sha256sums=('SKIP'
             'SKIP'
-            '49e1e0fe3fb5fa1e06021e11d8d29e6579ac548a4605308c9234ae0a02a0150f')
+            'e29431ffeb7368983c74b7f7ea108f74e1363305231b0b5bb698884945ab0c5a')
 
 prepare() {
   cd pbp-uboot
