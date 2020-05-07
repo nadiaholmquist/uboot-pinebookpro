@@ -8,7 +8,10 @@ flash_uboot() {
 ## arg 1:  the new package version
 post_install() {
   flash_uboot
-  sed -i s/"LABEL=ROOT"/"LABEL=ROOT_MNJRO"/g /boot/extlinux/extlinux.conf
+
+  if [[ ! -x /boot/extlinux/extlinux.conf ]]; then
+    mkextlinuxconf > /boot/extlinux/extlinux.conf
+  fi
 }
 
 ## arg 1:  the new package version

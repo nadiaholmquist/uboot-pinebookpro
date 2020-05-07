@@ -10,21 +10,20 @@ pkgdesc="U-Boot for Pinebook Pro"
 arch=('aarch64')
 url='https://git.eno.space/pbp-uboot.'
 license=('GPL')
-backup=('boot/extlinux/extlinux.conf')
+backup=('etc/conf.d/mkextlinuxconf')
 makedepends=('git' 'arm-none-eabi-gcc' 'dtc' 'bc')
 install=${pkgname}.install
 _commit_atf=22d12c4148c373932a7a81e5d1c59a767e143ac2
 source=("git+https://git.eno.space/pbp-uboot.git"
         "git+https://github.com/ARM-software/arm-trusted-firmware.git#commit=$_commit_atf"
-        "extlinux.conf")
-        #'0001-nvme-support.patch')
+        "mkextlinuxconf" "pinebookpro.conf")
 sha256sums=('SKIP'
             'SKIP'
-            'e29431ffeb7368983c74b7f7ea108f74e1363305231b0b5bb698884945ab0c5a')
+            'd229a6ae07cb95ac92da52f9740b8659c016ac53f150e38dce5db5550bdce8cd'
+            '8eeaa66ef7dcd7a134b8afe613eb0b0fd72c77d90c0dddff93a703af64d328d4')
 
 prepare() {
   cd pbp-uboot
-  #patch -Np1 -i "${srcdir}/0001-nvme-support.patch"
 }
 
 build() {
@@ -40,9 +39,9 @@ build() {
 }
 
 package() {
-  cd pbp-uboot
-
-  mkdir -p "${pkgdir}/boot/extlinux"
-  cp idbloader.img u-boot.itb  "${pkgdir}/boot"
-  cp "${srcdir}"/extlinux.conf "${pkgdir}"/boot/extlinux
+  install -d "${pkgdir}/boot/extlinux"
+  install -Dm644 pbp-uboot/idbloader.img "${pkgdir}/boot/idbloader.img"
+  install -Dm644 pbp-uboot/u-boot.itb "${pkgdir}/boot/u-boot.itb"
+  install -Dm644 pinebookpro.conf "${pkgdir}/etc/conf.d/mkextlinuxconf"
+  install -Dm755 mkextlinuxconf "${pkgdir}/usr/bin/mkextlinuxconf"
 }

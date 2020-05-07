@@ -1,0 +1,18 @@
+#!/bin/bash
+
+source /etc/conf.d/mkextlinuxconf
+
+distname=$(lsb_release -ds | sed s/\"//g)
+root=$(lsblk -nro UUID $(df --output=source / | tail -1))
+
+fspath() {
+	echo -n /
+	realpath --relative-to "$(findmnt -no TARGET -fT "$1")" "$1"
+}
+
+cat <<END
+LABEL $distname
+KERNEL $(fspath "${kernel}")
+FDT $(fspath "${dtb}")
+APPEND initrd=$(fspath "${initrd}") root=UUID=${root} ${args}
+END
