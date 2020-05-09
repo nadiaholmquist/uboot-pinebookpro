@@ -13,9 +13,9 @@ license=('GPL')
 backup=('etc/conf.d/mkextlinuxconf')
 makedepends=('git' 'arm-none-eabi-gcc' 'dtc' 'bc')
 install=${pkgname}.install
-_commit_atf=22d12c4148c373932a7a81e5d1c59a767e143ac2
+_tfa_tag=v2.3
 source=("git+https://git.eno.space/pbp-uboot.git"
-        "git+https://github.com/ARM-software/arm-trusted-firmware.git#commit=$_commit_atf"
+        "git+https://github.com/ARM-software/arm-trusted-firmware.git#tag=$_tfa_tag"
         "mkextlinuxconf" "pinebookpro.conf")
 sha256sums=('SKIP'
             'SKIP'

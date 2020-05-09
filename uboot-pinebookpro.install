@@ -9,9 +9,7 @@ flash_uboot() {
 post_install() {
   flash_uboot
 
-  if [[ ! -x /boot/extlinux/extlinux.conf ]]; then
-    mkextlinuxconf > /boot/extlinux/extlinux.conf
-  fi
+  mkextlinuxconf > /boot/extlinux/extlinux.conf
 }
 
 ## arg 1:  the new package version
